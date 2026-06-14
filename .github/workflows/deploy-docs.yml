@@ -41,7 +41,10 @@ jobs:
 
       - name: Install dependencies
         working-directory: docs-site
-        run: npm ci
+        # npm install (not ci): the lockfile is generated on macOS arm64, but the
+        # runner is linux x64 and needs different optional native deps (@emnapi/*);
+        # ci is strict and fails on that drift, install reconciles it.
+        run: npm install --no-audit --no-fund
 
       - name: Build static export
         working-directory: docs-site
