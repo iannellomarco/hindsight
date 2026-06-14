@@ -1,0 +1,122 @@
+---
+title: Meetings
+description: Record and transcribe meetings on-device, with a live panel, notes, and an AI Ask tab.
+---
+
+Meetings is where Hindsight records, transcribes, and summarizes your
+conversations. Recording and transcription happen on-device. Each finished
+meeting is saved alongside your days so you can revisit it later.
+
+## Start a recording
+
+There are three ways to begin:
+
+- **Record tile** — open the **Meetings** page (or the daybook's Today page)
+  and click **Record** on the "Record a meeting" tile.
+- **Hotkey** — press <kbd>⇧⌘M</kbd> from anywhere. The same shortcut stops the
+  recording when you're done.
+- **Menu bar** — click the Hindsight status item and choose **Start Recording**.
+
+You can also begin from the Index: <kbd>⌘K</kbd> → **Begin minutes**.
+
+When you start, Hindsight checks for Microphone and Screen Recording access. If
+either is missing, it points you to System Settings. The first time, grant both
+so capture can run.
+
+## Microphone and system audio
+
+By default Hindsight records two streams at once — your **microphone** and your
+Mac's **system audio** (the other people on the call) — and keeps them as
+separate, time-aligned tracks.
+
+Choose the default for new recordings under **Settings → Audio sources**:
+
+- **Microphone + System Audio** (default) — records your voice and the call
+  together.
+- **System Audio Only** — captures just what's playing on your Mac, with no
+  microphone. Use this for recordings where your own voice isn't needed.
+
+The microphone **Mute** control is available only in Microphone + System Audio
+mode.
+
+## The live panel
+
+Click the floating pill to open the meeting panel. The header shows whether
+you're **Recording** or **Paused**, the elapsed time, and live level meters for
+the microphone and system audio.
+
+From the header you can:
+
+- **Mute / Unmute** the microphone (mic + system mode only). Muting also pauses
+  live transcription of your voice.
+- **Pause / Resume** — pausing stops capture without leaving a gap; the saved
+  audio plays back seamlessly.
+- **Stop** — ends the meeting and starts transcription.
+
+The panel has three tabs, switchable with <kbd>⌘1</kbd>–<kbd>⌘3</kbd>:
+
+- **Notes** (default) — type your own notes as the meeting runs. They're saved
+  continuously. An **Insert** menu adds quick snippets like `/decision`,
+  `/action`, and `/question`.
+- **Transcript** — the live, speaker-labeled transcript. Toggle **Auto-scroll**
+  or **Copy** the text so far.
+- **Ask** — put a question to an AI provider about the conversation as it
+  happens (see below).
+
+## The floating pill
+
+While a meeting is active, a small pill floats on top of every app. It pulses
+with your audio levels while recording, dims with pause bars when paused, shows
+a spinner while transcribing, and a checkmark when the meeting is saved.
+
+- **Click** the pill to open the panel.
+- **Right-click** for **Stop**, **Pause / Resume**, **Open**, and **Cancel**.
+  Cancel discards the recording and deletes its audio, so it asks you to confirm
+  first.
+
+## Ask during a meeting
+
+The **Ask** tab lets you query an AI provider about the live transcript and your
+notes without leaving the call. The empty state offers browsable quick prompts
+grouped under **Catch Up**, **Capture**, and **Challenge** — for example
+"Summarize so far", "Action items", and "What should I ask?". Pinned follow-ups
+like "Tell me more" and "Counter-argument?" sit above the input once a thread
+is going.
+
+Your Ask conversation carries over to the saved meeting, so you can keep working
+with it afterward.
+
+<Callout>
+  Ask needs an AI provider; recording and transcription work without one.
+  Connect a provider under **Settings → AI Provider** — a local provider keeps
+  everything on your Mac.
+</Callout>
+
+## After a meeting
+
+When you press **Stop**, Hindsight transcribes the audio on-device and saves the
+meeting to your **Recent meetings** list. The pill confirms with a checkmark and
+clears itself shortly after.
+
+A saved meeting keeps its transcript, your notes, and any Ask conversation. You
+can:
+
+- **Rename** it from the title.
+- Run **prompt templates** against it — Summary, Action Items & Decisions,
+  Chapter Breakdown, and more.
+- Continue the **chat** about it from the meeting's page.
+- **Save Audio** to export the recording.
+
+### Run a summary automatically
+
+Turn on **Run marked prompts automatically** under "After each meeting" to have
+chosen templates (the **Summary** template is marked by default) run as soon as
+a meeting finishes. Because this sends the transcript to your AI provider, it's
+off until you switch it on. Use **Edit Prompts…** to add, pin, hide, or reset
+the built-in prompts.
+
+## Privacy
+
+Capture and transcription run entirely on your Mac. AI features — Ask, prompt
+templates, and auto-summaries — only reach out when you've connected a provider,
+and a local provider keeps everything on-device.

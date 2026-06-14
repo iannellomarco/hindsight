@@ -1,0 +1,93 @@
+---
+title: Recall
+description: Ask your book a question and get an answer drawn from your own days and meetings, with a link back to the exact moment it came from.
+---
+
+Recall is how you ask your book a question and get a real answer back — built
+from what you actually saw and recorded, not from the open web. Two surfaces
+work together: the **Index** for jumping straight to a page, and **Ask the
+Book** for questions that span many days at once.
+
+## The Index: jump anywhere
+
+Press <kbd>⌘K</kbd> from anywhere to open the Index. It is both a table of
+contents and a search box for the whole book.
+
+Start typing and it filters across everything in one place:
+
+- **The Days** — any page in your Day Journal, by title, summary, or date.
+- **Minutes** — a recorded meeting, by title.
+- **Commonplace Book** — beliefs you've kept.
+- **Lexicon** — corrective words and snippets.
+- **Colophon** — any setting, landing on its own row.
+- **Commands** — actions you can run, like Turn to today or Begin minutes.
+
+Open with an empty query and the Index shows a table of contents instead: the
+Parts of your book, your three most recent days, your three most recent
+minutes, and the common commands.
+
+Move the selection with the up and down arrows, press <kbd>Return</kbd> to go,
+and <kbd>Esc</kbd> to dismiss — focus returns to the page you were on. The
+Index is fast because it reads from what's already in memory; there's no
+waiting.
+
+## Ask the Book: a question across every day
+
+When you want an answer rather than a destination, ask the book. Open today's
+page and use the **Ask the book…** bar, or press <kbd>⇧⌘A</kbd> from anywhere
+to jump there and start typing.
+
+The full Ask the Book view searches **anything you saw, across every day**.
+Type a question — "what was the address jane.smith sent me?", "which build
+broke last Thursday?" — and the book answers from your own captured history.
+
+### How the answer is built
+
+If you've connected an AI provider, the answer streams back as prose, written
+only from the days and frames that match your question. Under the answer is a
+**Sources** list. Each source is the exact frame the answer drew from, shown as
+its time, the app, and the window title — for example:
+
+```
+[#1]  JUN 11 · 14:32 · Mail · Inbox — jane.smith@example.com
+```
+
+Click any source to open that frame: the original screen, at the moment it was
+captured, so you can verify the answer with your own eyes. Every `[#N]` in the
+answer maps to a row in the list.
+
+If you haven't connected a provider, Recall still works. Instead of prose, it
+returns **cards** — each one a specific match (a phone number, an email, a
+link, a file you saw) carrying the same time-and-place stamp, and a click opens
+the frame it came from. Recording and search never need a provider; the answer
+style just changes.
+
+### Quick filters
+
+The Ask the Book view offers one-tap chips for the things people look for most:
+
+- **Phone numbers**
+- **Emails**
+- **Links**
+- **Files**
+
+Tap one to seed the search and see every matching moment.
+
+### What you keep coming back to
+
+Before you've typed anything, Recall shows **You keep coming back to** — the
+people, sites, and files that recur across your days, each with how many days
+it spans and how many times you've seen it. Tap one to turn it into a search.
+
+## Asking about a single meeting
+
+Inside a recorded meeting you can ask about that meeting on its own. Open the
+meeting and use the **Ask about this meeting…** field to question its
+transcript and your notes directly, without searching the rest of the book.
+
+## A note on where this runs
+
+Recall reads your own on-device book. Search and the deterministic card results
+stay entirely on your Mac. The streamed prose answer uses whatever AI provider
+you've connected in the Colophon — and a local provider keeps everything on
+your Mac for that too.

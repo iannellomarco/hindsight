@@ -1,0 +1,156 @@
+---
+title: Second Brain
+description: Your cross-day knowledge graph — the people, projects, and files you keep returning to, the beliefs Hindsight forms about your focus, and how recall draws on them.
+---
+
+The Second Brain is the Commonplace Book in Hindsight: the page that reflects
+your own work back to you. It reads across every day you've captured, links the
+things that keep recurring, and forms a small set of plain-language beliefs about
+what you focus on. You can read those beliefs directly, explore how everything
+connects, and talk through your history.
+
+Open it from the Index (<kbd>⌘K</kbd>) and move between its four sections with
+the tab bar or <kbd>⌘1</kbd>–<kbd>⌘4</kbd>: **Chat**, **Insights**, **Network**,
+and **Export**.
+
+## Getting to know you
+
+The Second Brain only starts answering once it has seen enough of your work to be
+useful rather than confidently wrong. The page shows where it stands — **Still
+learning you**, **Getting to know you**, or **Ready** — with a progress bar and
+four counts: days, frames, things, and threads.
+
+It turns **Ready** once all four signals are met:
+
+- **5 days** captured
+- **300 frames** captured
+- **60 distinct things** seen (people, files, sites, and so on)
+- **3 recurring threads** — things that show up across more than one day
+
+Readiness is the weakest of the four, so a lopsided history (many frames but a
+single day) keeps warming until it fills out. Keep journaling and it gets there.
+
+## The knowledge graph
+
+As you work, Hindsight reads the captured text on each page and pulls out the
+concrete, recall-worthy things in it:
+
+- **People** — email addresses, and recurring phone numbers
+- **Files** — file paths and named files (matched against an extension list, so
+  `roadmap.swift` is recognized but `v1.2` is not)
+- **Sites** — web addresses, kept specific (`github.com/example/widgets` is its
+  own thing, not collapsed into a bare `github.com`)
+- **Projects and tickets** — issue references like `#318`
+- **Topics** — recurring subjects that tie the above together
+
+Each thing is tied back to the exact moment it appeared and timestamped, so it
+can be ranked and shown without losing where it came from. Extraction runs
+entirely on your Mac on text that has already been redacted, so secrets such as
+card numbers, keys, and one-time codes are never turned into entities. Ubiquitous
+plumbing — sign-in portals, analytics, CDNs, and boilerplate files like
+`README.md` or `package-lock.json` — is filtered out so it never looks like a hub
+of your work.
+
+When two things keep appearing together, that co-occurrence becomes a link. The
+result is a cross-day graph of who and what your work threads through.
+
+## Beliefs about your focus
+
+From that graph, Hindsight distills a self-model: a set of one-line **beliefs**
+about you, each grouped by kind — people you keep dealing with, projects and
+areas of your work, topics that recur, tools and sites you live in, files you
+keep returning to, rhythms in how you work, and open loops you touched then
+dropped.
+
+Beliefs are derived directly from your history, not guessed by an AI, and every
+one carries an honest confidence marker. A belief with thin evidence reads as
+**(tentative)** or **(likely)**; as the same person or file recurs across more
+days, the belief is reinforced and its confidence grows. The strongest beliefs
+rise to the top of the Commonplace Book.
+
+A few things keep the picture stable and honest:
+
+- A belief needs to show up across **at least two days** before it forms.
+- Confidence only firms up once enough evidence has accumulated, and a belief
+  that earned trust keeps it.
+- A single quiet day can't retire a belief — it fades only after several quiet
+  days in a row.
+- A file or ticket you touched a couple of times and then dropped about a week
+  ago is flagged as an **open loop**, phrased as a possibility rather than a
+  fact.
+
+You can read all of this with no AI provider connected — the beliefs are
+computed locally and shown as cards.
+
+## Insights
+
+The **Insights** tab surfaces what's worth your attention right now, all derived
+deterministically from your history:
+
+- **Worth noticing** — patterns rising or cooling across your recent days. Each
+  has a quick action to draft an email or a follow-up calendar event from it.
+- **Worth confronting** — a frank, grounded mirror of things your own history
+  suggests, each shown with its evidence. This stays silent unless your tone dial
+  (in the Colophon) allows it, and it never fabricates a criticism.
+- **How your picture has changed** — the arc of how the Second Brain's
+  understanding of you has shifted over time.
+
+## Network
+
+The **Network** tab is the graph at a glance:
+
+- **Most connected** — the hubs your work threads through.
+- **Surprising connections** — strong links between things that aren't both
+  central, ranked by how many times more often than chance they appear together.
+- **Areas** — clusters Hindsight detected in the graph.
+- **Your graph** — an interactive node-and-link canvas you can open with **Show
+  graph**.
+
+The tab also offers a few starter questions; tapping one drops you into Chat with
+that question already asked.
+
+## Chat and recall
+
+Chat is the conversational home of the Second Brain. Ask it about your work — who
+you keep dealing with, the files and tools you live in, or where your time
+actually goes — and it answers from what it has captured.
+
+Under the hood, recall grounds every answer in your real history rather than
+inventing anything:
+
+- It reads your question for what you're after (a phone number, a file, a site)
+  and pulls the matching things from your journal.
+- For relational or temporal questions ("how are X and Y connected?", "what have
+  I been doing around Z?"), it assembles real evidence from the graph and answers
+  from that bundle, keeping `[#n]` citations so you can jump to the exact moment
+  each claim came from.
+- Replies are checked against that evidence before they're saved, so a claim the
+  history doesn't support is stripped out.
+
+Conversations are remembered: the Second Brain resumes your thread, keeps a
+rolling summary so long chats stay coherent, and can open a fresh chat when you
+want one.
+
+There's also an **Explain** field for two specific things — enter a person, file,
+or site on each side and Hindsight shows the shared bridges between them, drawn
+only from your graph.
+
+<Callout>
+  Chat, the Explain field, and drafting use an AI provider; the beliefs,
+  Insights, and Network are computed locally and work without one. Connect a
+  provider under **Settings → AI Provider** — a local provider (Ollama, LM
+  Studio) keeps everything on your Mac.
+</Callout>
+
+## Export
+
+Everything stays on this Mac, and Export only materializes what you've already
+captured:
+
+- **Export Obsidian vault** — daily notes with backlinked people, sites, and
+  files.
+- **Export graph** — your knowledge graph as GraphML (for yEd, Gephi, Obsidian)
+  and Mermaid (for Markdown).
+
+Both write to your Mac and can be revealed in Finder; nothing leaves your
+machine.

@@ -1,0 +1,73 @@
+name: Deploy docs
+
+# Builds the Fumadocs static export and publishes it into the repo's Pages.
+#
+# GitHub Pages for this repo serves from the `main` branch `/docs` folder.
+# Two files at the root of `docs/` are LIVE and must never be touched by this
+# workflow:
+#   - docs/appcast.xml  -> the Sparkle feed at /hindsight/appcast.xml
+#   - docs/index.html   -> the landing page at /hindsight/
+# The built documentation site is published into docs/docs/ instead, so it is
+# served at /hindsight/docs/ and leaves the appcast and landing page intact.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs-site/**'
+
+# Allow the workflow to commit the built site back to main.
+permissions:
+  contents: write
+
+# Never run two deploys at once; let an in-flight build finish.
+concurrency:
+  group: deploy-docs
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: docs-site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: docs-site
+        run: npm ci
+
+      - name: Build static export
+        working-directory: docs-site
+        run: npm run build
+
+      - name: Sync built site into docs/docs
+        run: |
+          set -euo pipefail
+          # Replace ONLY docs/docs with the fresh export. docs/appcast.xml and
+          # docs/index.html at the root of docs/ are deliberately left untouched.
+          rm -rf docs/docs
+          mkdir -p docs/docs
+          cp -R docs-site/out/. docs/docs/
+          # Disable Jekyll so files/dirs prefixed with _ are served verbatim.
+          touch docs/docs/.nojekyll
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          # Stage only the docs site output; appcast.xml and index.html are never staged.
+          git add docs/docs
+          if git diff --cached --quiet; then
+            echo 'No documentation changes to publish.'
+            exit 0
+          fi
+          git commit -m 'docs: publish Fumadocs site to docs/docs [skip ci]'
+          git push

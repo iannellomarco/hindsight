@@ -1,0 +1,86 @@
+---
+title: Export
+description: Materialize your knowledge as an Obsidian-style vault of linked Markdown notes, or as a knowledge graph in GraphML and Mermaid. Everything stays on your Mac.
+---
+
+Export turns what Hindsight has already captured into open, portable files you
+can browse, link, and visualize in other tools. Nothing new leaves your machine
+— export only writes out the on-device, redacted data you can already see in the
+app. The database stays the source of truth; export is a one-way snapshot you can
+re-run any time.
+
+You'll find it in the Second Brain. Open it from the Index (<kbd>⌘K</kbd>) and
+go to the **Export** tab (<kbd>⌘4</kbd>).
+
+## Export an Obsidian vault
+
+**Export Obsidian vault** writes your whole journal as a folder of linked
+Markdown notes — the kind of vault Obsidian, Logseq, or any plain-Markdown editor
+can open directly.
+
+Each completed day becomes a daily note, and the people, sites, and files you
+encountered become their own notes, joined together with `[[wikilinks]]` so the
+whole thing browses as a connected web.
+
+What you get:
+
+- **Days/** — one note per captured day, with the day's narrative, a timeline of
+  what you worked on, and linked lists of the **People**, **Links**, and **Files**
+  seen that day. Your own notes for the day come along too. Each note carries
+  frontmatter (`date`, `captures`, `tags`).
+- **People/** — one note per person, built from the email addresses in your
+  history. Addresses are humanized into names (`jane.smith@example.com` becomes
+  *Jane Smith*), and OCR variants of the same address collapse into a single
+  note. Each note lists the days that person showed up.
+- **Links/** — one note per web address you returned to, backlinked to the days
+  it appeared.
+- **Files/** — one note per file, backlinked to the days it appeared.
+- **Topics/** — "area" notes for the clusters Hindsight detected in your graph,
+  each linking its members.
+- **GRAPH_REPORT.md** — a map-of-content for the vault: your most-connected
+  nodes, surprising connections, and a few questions worth exploring, all
+  resolving to the notes above.
+
+Only completed days are included, and every note is plain Markdown — no lock-in.
+Re-running the export refreshes the vault in place.
+
+## Export a graph
+
+**Export graph (GraphML + Mermaid)** writes your knowledge graph — the people,
+sites, and files that recur together — in two visualization-ready formats:
+
+- **graph.graphml** — open it in [yEd](https://www.yworks.com/products/yed),
+  [Gephi](https://gephi.org), or Obsidian's graph plugins for an interactive,
+  laid-out view.
+- **graph.mermaid** — a [Mermaid](https://mermaid.js.org) `graph TD` diagram you
+  can paste straight into Markdown, Obsidian, or Notion, or render at
+  [mermaid.live](https://mermaid.live).
+
+Both are derived from the same recurring-node snapshot the Second Brain's Network
+tab already shows: nodes are the things you keep returning to, and edges are the
+links between things that keep appearing together (weighted by how strong the
+connection is).
+
+## Where the files land
+
+By default both exports write inside Hindsight's own folder:
+
+- **Obsidian vault** — `~/Library/Application Support/Hindsight/ObsidianVault/`
+- **Graph files** — `~/Library/Application Support/Hindsight/GraphExport/`
+
+After an export runs, a **Reveal in Finder** button appears next to it — the
+quickest way to jump to the files. The status line below the buttons confirms
+what was written (for example, *Exported 12 days · 34 people · 18 links · 9
+files.* for the vault, or *Exported graph · 60 nodes · 142 edges* for the graph).
+
+## Before you export
+
+Export needs something to materialize, so journal a few days first. If there's
+nothing to write yet, Hindsight tells you so rather than creating an empty vault.
+
+<Callout>
+  Export is fully local. It reuses only the redacted, on-device data Hindsight
+  has already captured — secrets such as card numbers, keys, and one-time codes
+  are never turned into notes — and nothing is sent anywhere. The files are yours
+  to move, edit, and back up however you like.
+</Callout>

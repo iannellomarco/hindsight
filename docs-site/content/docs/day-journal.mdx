@@ -1,0 +1,107 @@
+---
+title: Day Journal
+description: Quiet on-device screenshots, on-device text recognition, an AI write-up of your day, and an end-of-day review — all kept on your Mac.
+---
+
+The Day Journal is today's page in your book. While it runs, Hindsight quietly
+takes a screenshot of your front window every couple of minutes, reads the text
+on screen so you can recall anything you saw, and — when you stop for the day —
+writes the day up for you to review and keep.
+
+## Start capturing
+
+Open the Day Journal control on today's page and press **Start**. The first time,
+macOS needs the **Screen Recording** permission; grant it under
+**System Settings → Privacy & Security → Screen Recording**, then start again.
+
+While capture is running you'll see:
+
+- A **RECORDING** indicator with an elapsed clock.
+- A running **FRAMES** count (screenshots taken so far).
+- A **MOMENTS** count. Press **Mark Moment** to flag something worth
+  remembering as it happens; you can add a short note to a moment, too.
+
+To wrap up, press **Stop & Review**. **Discard** throws the session away.
+
+## What gets captured
+
+- **Screenshots.** A frame of your front window, taken on-device at your chosen
+  cadence. The default is **every 2 minutes** (you can pick 30 seconds, 1, 2, 5,
+  or 10 minutes).
+- **On-screen text (OCR).** Each frame is read on-device so its text is
+  searchable and recallable. Recognition runs entirely on your Mac.
+- **Context.** The app and window in front, so activities are easy to make sense
+  of later.
+
+<Callout title="Deep read (off by default)">
+  **Capture focused text (deep read)** reads the focused window's text through
+  Accessibility for richer recall. It's off by default, stays on-device, and
+  runs through the same redaction gate as everything else. Turn it on under
+  **Settings → Capture** if you want it.
+</Callout>
+
+## The AI day narrative
+
+As the day goes on, Hindsight periodically reviews the new screenshots and keeps
+a running summary of what you've been working on. The default is **every 30
+minutes** (you can choose 15, 30, or 60). When you stop, that work becomes the
+day's narrative — a short, readable write-up that sits on the finished day's
+page alongside a timeline of your activities, the apps you used, your marked
+moments, and any notes you add.
+
+<Callout>
+  The narrative is the one part that draws on an AI provider. Connect one under
+  **Settings → AI Provider** — a local provider keeps everything on your Mac.
+  Capture, text recognition, search, and storage never need a provider.
+</Callout>
+
+## The end-of-day review
+
+After **Stop & Review**, Hindsight writes up your day and then opens a short
+**review** at the foot of today's page. It's a chat: it shows the running
+summary, may ask a few follow-up questions to fill in gaps, and lets you add
+notes. When you're happy, keep the day; or discard it. A kept day is saved as a
+finished page you can turn back to anytime.
+
+Any finished day also has **Chat with this day** — a free-form conversation
+about that single day, answered from what was captured.
+
+## Pausing capture
+
+Press **Pause** during a session to stop new screenshots for a while. You can
+note why with a quick reason — **Meeting**, **Break**, **Lunch**, **Personal** —
+or type your own. Press **Resume** to start capturing again. The pause (and its
+reason) is recorded, so a finished day can show when and why capture was
+interrupted.
+
+Hindsight can also pause on its own:
+
+- **Pause when idle** stops capturing when you step away. On by default, after
+  **2 minutes** idle (you can choose 30 seconds, 1, or 2 minutes).
+- **Reduce work on battery** lightens capture and analysis on battery power.
+  Off by default.
+
+Both live under **Settings → Capture**.
+
+## Keeping and clearing screenshots
+
+Screenshots are pruned automatically by the **Keep screenshots for** setting —
+**30 days** by default, or 7, 90, or Forever. Lowering it deletes older captures
+on its next pass; "Forever" never auto-deletes.
+
+## Turning through your days
+
+Use the left and right arrows to turn between days. The red Ribbon always brings
+you back to today, and **Turn to today** is also available from the Index
+(<kbd>⌘K</kbd>, shortcut <kbd>T</kbd>).
+
+## Where your data is stored
+
+Everything stays on this Mac, under your Library:
+
+- **Screenshots:** `~/Library/Application Support/HindsightNext/journal`
+- **Journal database** (text, timeline, narratives, notes):
+  `~/Library/Application Support/HindsightNext/hindsight.db`
+
+Capture and text recognition happen on-device, and nothing leaves your Mac
+unless you choose to connect an AI provider for the narrative or for chat.

@@ -1,0 +1,80 @@
+---
+title: Release notes
+description: What changed in each version of Hindsight, newest first.
+---
+
+What's new in Hindsight, newest first. Hindsight keeps itself up to date, and
+you can check manually from the Colophon under **The Apparatus → Check for
+updates**.
+
+## 1.0.1
+
+A packaging release focused on a smoother, more reliable first launch.
+
+- **Notarized and stapled.** The app is signed, notarized by Apple, and the
+  notarization ticket is stapled into the build. macOS can verify Hindsight
+  offline, so the first launch is clean even without a network connection — no
+  spurious "damaged" or "cannot be opened" warnings.
+- **Steadier installs.** Hardened the DMG so dragging Hindsight to Applications
+  and opening it the first time just works.
+
+No feature changes — everything in 1.0.0 below is unchanged.
+
+## 1.0.0
+
+The first release of Hindsight: a private, on-device daybook for macOS. One
+continuous book you turn through page by page, with three pillars and an Index
+(<kbd>⌘K</kbd>) that jumps anywhere.
+
+### Day Journal
+
+A running record of your day, woven from periodic screen capture read with
+on-device OCR (Apple Vision). Turn between days with the left and right arrows,
+let the red Ribbon bring you back to today, and use **Ask the book** on any page
+to pose a question about your day or your history. Screenshots and the journal
+database never leave your Mac.
+
+### Meetings
+
+Record and transcribe meetings on-device. Start one from the Record tile, the
+menu bar, the Index (**Begin minutes**), or the <kbd>⇧⌘M</kbd> hotkey. Hindsight
+can watch your calendar and offer to begin a recording when a meeting starts,
+recognizing Google Meet, Zoom, and Microsoft Teams links.
+
+- Records your **microphone** and your Mac's **system audio** as separate,
+  time-aligned tracks (the default; **System Audio Only** is also available).
+- A floating pill and a live panel with **Notes**, a speaker-labeled
+  **Transcript**, and an **Ask** tab.
+- Saved meetings keep their transcript, notes, and any Ask conversation, and can
+  be renamed and re-run through prompt templates.
+
+### Second Brain
+
+A page that reads across every day you've captured, links the things that keep
+recurring, and forms plain-language **beliefs** about your focus. It moves
+between **Chat**, **Insights**, **Network**, and **Export**. The beliefs,
+Insights, and Network are computed locally and work with no AI provider
+connected; recall grounds every chat answer in your real history with citations
+back to the moment each claim came from.
+
+### On-device by default
+
+- **Capture, transcription, and storage stay local.** Meetings are transcribed
+  on your Mac with the on-device speech model (Parakeet, which runs on the Neural
+  Engine), and your journal database never leaves it.
+- **No AI traffic without a provider you choose.** Until you connect an AI
+  provider, nothing is sent anywhere — Ask the book and the Second Brain simply
+  wait.
+- **A local provider keeps everything on your machine.** Connect Ollama or
+  LM Studio and your text is processed locally.
+- **Cloud is opt-in.** Sending anything to a cloud provider is off until you
+  turn it on, and the same gate applies uniformly to journal text, meeting
+  transcripts, chat, and drafts.
+
+### Requirements
+
+- macOS 14.2 or later.
+- Apple Silicon (M-series) — the on-device speech model runs on the Neural
+  Engine.
+- A few gigabytes of free disk space for the speech model, which downloads once
+  during first-time setup.

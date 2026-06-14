@@ -1,0 +1,206 @@
+---
+title: Command line
+description: hindsight-cli is a companion tool that shares the app's database — list and export meetings, transcribe files on-device, manage speech models, inspect your Second Brain, and run LLM tasks from the terminal.
+---
+
+Hindsight ships with a companion command-line tool, `hindsight-cli`, that talks
+to the same database as the app. Anything you record, transcribe, or learn in
+the app is visible from the terminal, and anything the CLI writes shows up in
+the app. It is handy for scripting, exporting, and feeding your transcripts into
+other tools.
+
+Every command accepts `--json` for clean, machine-readable output. Progress and
+status messages go to standard error, so the JSON on standard output stays
+pipeable.
+
+```bash
+hindsight-cli --help          # list every command
+hindsight-cli <command> --help # options for one command
+hindsight-cli --version        # tool version
+```
+
+By default the CLI uses the app's shared database. Pass `--database <path>` on
+most commands to point at a different one.
+
+## Meetings
+
+Work with your saved meeting recordings and their transcripts.
+
+```bash
+# List recent meetings (default 20)
+hindsight-cli meetings list
+hindsight-cli meetings list --limit 50 --json
+
+# Show one meeting's metadata
+hindsight-cli meetings show <id>
+
+# Print the transcript
+hindsight-cli meetings transcript <id>
+
+# Export a transcript to a file
+hindsight-cli meetings export <id> --format markdown
+```
+
+You can refer to a meeting by its full ID, a unique ID prefix (at least four
+hex characters), or a unique title.
+
+**Export** supports several formats with `--format`: `txt` (default),
+`markdown`, `srt`, `vtt`, and `json`. By default the file is written as
+`<title>.<ext>` in the current directory; use `--output <path>` to choose the
+name, or `--stdout` to print instead of writing a file.
+
+Each meeting also keeps **notes** and saved **results** (the output of prompts
+you ran on it):
+
+```bash
+hindsight-cli meetings notes get <id>
+hindsight-cli meetings notes set <id> "Recap to send out"
+hindsight-cli meetings notes append <id> "Follow up Friday"
+hindsight-cli meetings notes clear <id>
+
+hindsight-cli meetings results list <id>
+hindsight-cli meetings results add <id> "Action items" -   # text from stdin
+```
+
+Use `-` in place of text to read from standard input.
+
+## Transcribe
+
+Transcribe any audio or video file with the on-device speech engines. The file
+is decoded to audio and recognized locally — nothing leaves your Mac.
+
+```bash
+hindsight-cli transcribe meeting.m4a
+hindsight-cli transcribe lecture.mp4 --engine whisper --language en
+hindsight-cli transcribe call.wav --diarize --format transcript
+```
+
+Key options:
+
+- `--engine` — `parakeet` (default), `whisper`, or `app-default` (use whatever
+  engine the app is set to).
+- `--language` — language hint for Whisper, e.g. `en`, `it`.
+- `--format` — `text` (default), `transcript` (timestamped lines), or `json`.
+- `--processing` — `raw`, `clean`, or `app-default` (default; follows your
+  Vocabulary setting). `clean` rebuilds punctuation and applies your custom
+  words.
+- `--diarize` — separate speakers and label each turn (Speaker 1, Speaker 2, …).
+  Tune with `--diar-threshold` (default `0.6`; lower finds more speakers) and
+  `--diar-max-speakers` (default `6`).
+- `--no-save` — transcribe without adding the result to your library.
+
+By default the result is saved to your library so it appears in the app.
+
+## Models
+
+Manage the on-device speech models.
+
+```bash
+hindsight-cli models list        # engines and whether each is cached
+hindsight-cli models status      # cache status (never downloads)
+hindsight-cli models download whisper
+hindsight-cli models warm-up --engine parakeet
+hindsight-cli models clear       # delete cached models
+```
+
+The Parakeet engine (`parakeet-tdt-0.6b-v3`) downloads automatically the first
+time it is used, so `download` is only needed for `whisper`. Use `warm-up` to
+prepare an engine ahead of time (it may download on first run), and `clear` to
+remove cached models from disk.
+
+## Second Brain
+
+Inspect the Second Brain self-model — what the app has learned about you — and
+verify it against the same guard the app uses, without opening the app.
+
+```bash
+hindsight-cli second-brain
+hindsight-cli second-brain --include-inactive --json
+```
+
+The output lists each belief with its salience, confidence, and evidence count,
+and reports how many would be kept versus dropped by the current guard. Add
+`--include-inactive` to also show dormant or retired beliefs.
+
+## LLM
+
+Run language-model tasks from the terminal. Unlike the app, the CLI is
+configured per call — you pass the provider and key on each invocation; nothing
+is stored.
+
+```bash
+# Check the connection
+hindsight-cli llm test-connection --provider anthropic --api-key-env ANTHROPIC_API_KEY
+
+# Summarize a file or stdin
+hindsight-cli llm summarize notes.txt --provider anthropic --api-key-env ANTHROPIC_API_KEY
+cat notes.txt | hindsight-cli llm summarize - --provider openai --api-key-env OPENAI_API_KEY
+
+# Ask a question about a saved meeting transcript
+hindsight-cli llm chat <meeting-id> "What did we decide about pricing?" --provider anthropic --api-key-env ANTHROPIC_API_KEY
+
+# Apply a custom instruction to a file or stdin
+hindsight-cli llm transform "Turn this into bullet points" notes.txt --provider anthropic --api-key-env ANTHROPIC_API_KEY
+```
+
+Supported providers: `anthropic`, `openai`, `openaiCompatible`, `gemini`,
+`openrouter`, `ollama`, `lmstudio`, `omlx`, and `cli` (a local subprocess).
+
+How the key is resolved, in order: `--api-key` (a literal — discouraged), then
+`--api-key-env` (the name of an environment variable holding the key), then the
+conventional variable for the provider (for example `ANTHROPIC_API_KEY`,
+`OPENAI_API_KEY`, `GEMINI_API_KEY`, `OPENROUTER_API_KEY`). Local providers like
+`ollama` need no key.
+
+Other useful options:
+
+- `--model` — pick a model. Required for `openaiCompatible`, `lmstudio`, and
+  `omlx`; other providers fall back to a conservative default.
+- `--base-url` — an absolute `http(s)` URL for self-hosted endpoints.
+- `--command` — the subprocess template, required for the `cli` provider.
+
+## Import
+
+Bring data over from an older version of the app. Import is read-only on the
+source — your originals are never touched — and never runs automatically.
+
+```bash
+hindsight-cli import --dry-run    # report what would be imported, write nothing
+hindsight-cli import              # actually import
+```
+
+`--dry-run` shows the per-table counts (imported, skipped, unsupported) without
+writing anything. Add `--json` for a structured report.
+
+## JSON output
+
+Pass `--json` to get stable, pretty-printed JSON with sorted keys and ISO-8601
+dates. Status text is kept off standard output, so you can pipe results
+straight into other tools:
+
+```bash
+hindsight-cli meetings list --json | jq '.[].title'
+```
+
+On failure in `--json` mode, the tool prints an error envelope instead of the
+normal payload:
+
+```json
+{
+  "ok": false,
+  "error": "Provider anthropic needs an API key (--api-key-env or ANTHROPIC_API_KEY).",
+  "errorType": "validation"
+}
+```
+
+The `errorType` field comes from a small, stable vocabulary — for example
+`auth`, `config`, `connection`, `lookup`, `model`, `rate_limit`,
+`input_missing`, `input_empty`, and `validation` — so scripts can branch on the
+kind of failure.
+
+## Exit codes
+
+- `0` — success.
+- `1` — a runtime failure (network, provider, transcription, and similar).
+- `2` — user misuse: bad arguments, a missing input file, or a lookup that was
+  ambiguous or too short.
