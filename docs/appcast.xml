@@ -5,22 +5,7 @@
     <link>https://iannellomarco.github.io/hindsight/appcast.xml</link>
     <description>Sparkle update feed for Hindsight.</description>
     <language>en</language>
-    <!--
-      Release items are appended here by the release pipeline AFTER the DMG is
-      built, Developer ID-signed, notarized, stapled, and EdDSA-signed with the
-      Sparkle key. Each item looks like:
-
-      <item>
-        <title>1.0.0</title>
-        <sparkle:version>1</sparkle:version>
-        <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
-        <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
-        <pubDate>...</pubDate>
-        <enclosure
-          url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.0/Hindsight-1.0.0.dmg"
-          sparkle:edSignature="..." length="..." type="application/octet-stream"/>
-      </item>
-    -->
+    <!-- Newest release first. Items are appended by the release pipeline. -->
     <item>
       <title>1.0.0</title>
       <sparkle:version>128</sparkle:version>
