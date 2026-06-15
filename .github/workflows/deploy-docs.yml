@@ -2,13 +2,13 @@ name: Deploy docs
 
 # Builds the Fumadocs static export and publishes it into the repo's Pages.
 #
-# GitHub Pages for this repo serves from the `main` branch `/docs` folder.
-# Two files at the root of `docs/` are LIVE and must never be touched by this
-# workflow:
-#   - docs/appcast.xml  -> the Sparkle feed at /hindsight/appcast.xml
-#   - docs/index.html   -> the landing page at /hindsight/
-# The built documentation site is published into docs/docs/ instead, so it is
-# served at /hindsight/docs/ and leaves the appcast and landing page intact.
+# GitHub Pages for this repo serves from the `gh-pages` branch (root). Two
+# things at the root of gh-pages are LIVE and must never be clobbered:
+#   - appcast.xml  -> the Sparkle feed at /hindsight/appcast.xml
+#   - index.html   -> the landing page at /hindsight/
+# The built docs are published into gh-pages/docs/ (served at /hindsight/docs/);
+# keep_files: true preserves everything else already on gh-pages, so the appcast
+# and landing are left intact. The appcast itself is maintained by tools/release.sh.
 
 on:
   push:
@@ -18,7 +18,6 @@ on:
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
-# Allow the workflow to commit the built site back to main.
 permissions:
   contents: write
 
@@ -50,29 +49,16 @@ jobs:
 
       - name: Build static export
         working-directory: docs-site
-        run: npm run build
-
-      - name: Sync built site into docs/docs
         run: |
           set -euo pipefail
-          # Replace ONLY docs/docs with the fresh export. docs/appcast.xml and
-          # docs/index.html at the root of docs/ are deliberately left untouched.
-          rm -rf docs/docs
-          mkdir -p docs/docs
-          cp -R docs-site/out/. docs/docs/
-          # Disable Jekyll so files/dirs prefixed with _ are served verbatim.
-          touch docs/docs/.nojekyll
+          npm run build
+          # Disable Jekyll so _next/ assets are served verbatim.
+          touch out/.nojekyll
 
-      - name: Commit and push
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          # Stage only the docs site output; appcast.xml and index.html are never staged.
-          git add docs/docs
-          if git diff --cached --quiet; then
-            echo 'No documentation changes to publish.'
-            exit 0
-          fi
-          git commit -m 'docs: publish Fumadocs site to docs/docs [skip ci]'
-          git push
+      - name: Deploy to gh-pages/docs
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs-site/out
+          destination_dir: docs
+          keep_files: true   # preserves appcast.xml + index.html at the gh-pages root
