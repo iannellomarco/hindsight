@@ -44,5 +44,19 @@
       <pubDate>Mon, 15 Jun 2026 06:58:39 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.3/Hindsight-1.0.3.dmg" sparkle:edSignature="tQerDvhM2dKXCNJ4BI3QbYVnNzbI9/eAjdwKvj7dZuDPBgVtyW6l2USC/frnT6FtMYpDisB22KQO0mnsr3UvAA==" length="20177848" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.4</title>
+      <sparkle:version>139</sparkle:version>
+      <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>A reliability release for meeting recording &mdash; especially your first one after installing.</p>
+<ul>
+  <li><strong>Meetings wait for the speech model.</strong> If you start recording before the on-device speech model has finished its one-time setup, Hindsight now shows &ldquo;Preparing speech model&hellip;&rdquo; and begins once it&rsquo;s ready &mdash; instead of recording a meeting that comes back with an empty transcript.</li>
+  <li><strong>A more responsive Mac while recording.</strong> Day Journal capture pauses for the duration of a meeting, so screen capture and live transcription no longer compete for the Neural Engine. It resumes automatically when the meeting ends.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Mon, 15 Jun 2026 16:13:02 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.4/Hindsight-1.0.4.dmg" sparkle:edSignature="ctGxQmSDz8AzcYOlVVvRWvyL8HcPMngXZoQb3qmliFfuiXFJSZLQ/ZGsStupGh1DABeMxZtlbkIqRBbS2KKYBw==" length="20192792" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
