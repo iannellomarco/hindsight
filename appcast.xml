@@ -22,5 +22,13 @@
       <pubDate>Sun, 14 Jun 2026 17:07:15 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.1/Hindsight-1.0.1.dmg" sparkle:edSignature="exy2Bn9juGBIS8SFtUmKWLZ/5D1PAOuYnhD5TDY+BMe57p0QFLEpiPF1K9HR0Tb7ewpvaZacwxvhD7kILzUgBg==" length="23523442" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.2</title>
+      <sparkle:version>132</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <pubDate>Mon, 15 Jun 2026 04:56:04 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.2/Hindsight-1.0.2.dmg" sparkle:edSignature="/tGLWyS5D9e6zxHBN+mq66VI33QCB3omzA79p6nusTW4hyZMGq9vgeVHhmW0EgqrMa01XX0VeclwUiC3qIUnDg==" length="20162742" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
