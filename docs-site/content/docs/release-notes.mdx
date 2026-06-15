@@ -7,6 +7,31 @@ What's new in Hindsight, newest first. Hindsight keeps itself up to date, and
 you can check manually from the Colophon under **The Apparatus → Check for
 updates**.
 
+## 1.0.3
+
+A small reliability release for first-run setup.
+
+- **Clearer Screen Recording setup.** When Hindsight is opened from outside your
+  Applications folder — where macOS runs it from a temporary, locked-down copy —
+  setup now tells you to move Hindsight to Applications and reopen it, which is
+  the only way the Screen Recording permission will stick. Previously it pointed
+  you at the "+" button, which can't take effect in that case.
+- **Sturdier packaging.** The disk image is now signed unambiguously, and the
+  diagnostics behind the Screen Recording grant were tightened so first-run
+  setup issues are easier to trace.
+
+No feature changes — everything in 1.0.0 below is unchanged.
+
+## 1.0.2
+
+- **Fixed a launch crash on some Macs.** The bundled Daybook fonts failed to
+  load on Macs other than the one the app was built on, which could crash
+  Hindsight at startup. Fonts now load reliably on every Mac.
+- **Smoother Screen Recording grant.** After you allow Screen Recording, setup
+  now shows a clear **Relaunch Hindsight** step — macOS only applies this
+  permission to a freshly launched app, so the relaunch is what makes the grant
+  take effect.
+
 ## 1.0.1
 
 A packaging release focused on a smoother, more reliable first launch.
