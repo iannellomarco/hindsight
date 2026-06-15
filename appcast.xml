@@ -30,5 +30,19 @@
       <pubDate>Mon, 15 Jun 2026 04:56:04 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.2/Hindsight-1.0.2.dmg" sparkle:edSignature="/tGLWyS5D9e6zxHBN+mq66VI33QCB3omzA79p6nusTW4hyZMGq9vgeVHhmW0EgqrMa01XX0VeclwUiC3qIUnDg==" length="20162742" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.3</title>
+      <sparkle:version>137</sparkle:version>
+      <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>A small reliability release for first-run setup.</p>
+<ul>
+  <li><strong>Clearer Screen Recording setup.</strong> When Hindsight is opened from outside your Applications folder &mdash; where macOS runs it from a temporary, locked-down copy &mdash; setup now tells you to move Hindsight to Applications and reopen it, which is the only way the Screen Recording permission will stick. Previously it pointed you at the &ldquo;+&rdquo; button, which can&rsquo;t take effect in that case.</li>
+  <li><strong>Sturdier packaging.</strong> The disk image is now signed unambiguously, and the diagnostics behind the Screen Recording grant were tightened so first-run setup issues are easier to trace.</li>
+</ul>
+<p>No feature changes &mdash; everything in 1.0.0 is unchanged. Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Mon, 15 Jun 2026 06:58:39 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.3/Hindsight-1.0.3.dmg" sparkle:edSignature="tQerDvhM2dKXCNJ4BI3QbYVnNzbI9/eAjdwKvj7dZuDPBgVtyW6l2USC/frnT6FtMYpDisB22KQO0mnsr3UvAA==" length="20177848" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
