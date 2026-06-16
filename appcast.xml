@@ -58,5 +58,19 @@
       <pubDate>Mon, 15 Jun 2026 16:13:02 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.4/Hindsight-1.0.4.dmg" sparkle:edSignature="ctGxQmSDz8AzcYOlVVvRWvyL8HcPMngXZoQb3qmliFfuiXFJSZLQ/ZGsStupGh1DABeMxZtlbkIqRBbS2KKYBw==" length="20192792" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.5</title>
+      <sparkle:version>141</sparkle:version>
+      <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Meeting recording now starts instantly.</p>
+<ul>
+  <li><strong>No more waiting to record.</strong> Previously, starting a meeting could pause on &ldquo;Preparing speech model&hellip;&rdquo; while the on-device model loaded. Now recording begins immediately and captures audio from the first second; the speech model loads in the background.</li>
+  <li><strong>Visible transcription progress.</strong> While the model loads, the transcript area shows a progress bar instead of a frozen screen, and the transcript fills in as soon as the model is ready. The full meeting is always transcribed when you stop.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Tue, 16 Jun 2026 16:27:31 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.5/Hindsight-1.0.5.dmg" sparkle:edSignature="eLYWg0sYbHO75fYZmY6j4eCLCAdqkaMBsa6k9gmAaIkLnxyZrbts7ZMfJ5BGvsAOk8lHAdnBj4MQgN4bSYSBDw==" length="20206122" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
