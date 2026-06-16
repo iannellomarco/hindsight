@@ -72,5 +72,20 @@
       <pubDate>Tue, 16 Jun 2026 16:27:31 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.5/Hindsight-1.0.5.dmg" sparkle:edSignature="eLYWg0sYbHO75fYZmY6j4eCLCAdqkaMBsa6k9gmAaIkLnxyZrbts7ZMfJ5BGvsAOk8lHAdnBj4MQgN4bSYSBDw==" length="20206122" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.6</title>
+      <sparkle:version>145</sparkle:version>
+      <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Turning the pages &mdash; fixed, and nicer.</p>
+<ul>
+  <li><strong>Day navigation works again.</strong> The left/right arrow keys (and &#8984;[ / &#8984;]) now turn between days without having to click the page first, and the optional two-finger swipe (Colophon &rarr; &ldquo;Turn pages with a two-finger swipe&rdquo;) is reliable.</li>
+  <li><strong>A page-peel turn.</strong> Days now turn with a subtle page-peel animation instead of a flat slide. Honors Reduce Motion.</li>
+  <li><strong>New app icon.</strong> A Daybook cover with the rubric-red ribbon bookmark.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Tue, 16 Jun 2026 17:08:34 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.6/Hindsight-1.0.6.dmg" sparkle:edSignature="CjwRk5OBDT+5PtEkvU/mNiSpH/WqGcxr8GUz2bnU1xSNNn2lbznKJgdQpvzftC0OvJ6CKk4lkLkQxEWTX4rgCw==" length="20661259" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
