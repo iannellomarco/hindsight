@@ -100,5 +100,19 @@
       <pubDate>Wed, 17 Jun 2026 07:59:55 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.7/Hindsight-1.0.7.dmg" sparkle:edSignature="11iYY864NIa0XdX+BJNLBsdrXdtAtcYIgtxhYyZVphfuAo3xutqcgNtwEx5uX/iQX7eKIMct9P4kYUG/K7e0Cg==" length="20649424" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.8</title>
+      <sparkle:version>151</sparkle:version>
+      <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Fixes meeting transcription.</p>
+<ul>
+  <li><strong>Transcription no longer freezes.</strong> A scheduling deadlock could leave the live transcript blank during a meeting and the post-recording &ldquo;transcribing&hellip;&rdquo; step stuck indefinitely. Recording and transcription now run on separate lanes &mdash; the live transcript fills in during the meeting and the final transcript completes promptly.</li>
+  <li><strong>More accurate speakers.</strong> Tightened speaker separation so a single remote participant is no longer occasionally split into two, and a slow speaker-detection step no longer holds up the final transcript.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Wed, 17 Jun 2026 11:50:45 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.8/Hindsight-1.0.8.dmg" sparkle:edSignature="dx6SFjqp61Z1KoaOVjwr9cz8URnCAxCH20gL8SpVEjHmf6TKm6RdLwbNyqhnyvCnLAWo5Q2GLI+lIVcIB/RTBw==" length="20687201" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
