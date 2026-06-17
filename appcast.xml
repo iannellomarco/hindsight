@@ -87,5 +87,18 @@
       <pubDate>Tue, 16 Jun 2026 17:08:34 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.6/Hindsight-1.0.6.dmg" sparkle:edSignature="CjwRk5OBDT+5PtEkvU/mNiSpH/WqGcxr8GUz2bnU1xSNNn2lbznKJgdQpvzftC0OvJ6CKk4lkLkQxEWTX4rgCw==" length="20661259" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.7</title>
+      <sparkle:version>147</sparkle:version>
+      <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Clearer day navigation.</p>
+<ul>
+  <li><strong>Visible page controls.</strong> The Days page now has previous / next buttons and a dotted day indicator beneath it &mdash; one dot per day, with the current day highlighted. Click any dot to jump straight to that day. (The page-turn controls were previously invisible edge zones.)</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Wed, 17 Jun 2026 07:59:55 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.7/Hindsight-1.0.7.dmg" sparkle:edSignature="11iYY864NIa0XdX+BJNLBsdrXdtAtcYIgtxhYyZVphfuAo3xutqcgNtwEx5uX/iQX7eKIMct9P4kYUG/K7e0Cg==" length="20649424" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
