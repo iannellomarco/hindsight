@@ -152,5 +152,22 @@
       <pubDate>Wed, 17 Jun 2026 12:19:28 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.9/Hindsight-1.0.9.dmg" sparkle:edSignature="pG5VWVpOPhkidViqw54a60kNRd8LiA7BLL7wrahud7AxzCiMCF+SyUUwHiz5nFYBhCHF2veVm6bUrO82vBCcCg==" length="20721328" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.10</title>
+      <sparkle:version>158</sparkle:version>
+      <sparkle:shortVersionString>1.0.10</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Much better speaker detection, plus new ways to fix up a meeting after it&rsquo;s recorded.</p>
+<ul>
+  <li><strong>Far better speaker separation.</strong> A one-on-one call is no longer split into a handful of phantom speakers, and genuine group meetings keep everyone &mdash; the speaker count is no longer capped, so a large call isn&rsquo;t truncated down to a few voices.</li>
+  <li><strong>Re-analyze a meeting.</strong> A new button on a saved meeting re-runs transcription and speaker detection on the original audio &mdash; so you can pick up these speaker improvements on meetings recorded earlier, without recording again.</li>
+  <li><strong>Rename a meeting.</strong> A pencil next to the title renames a meeting at any time.</li>
+  <li><strong>Name a meeting from your calendar.</strong> One click names a meeting after the calendar event it overlaps, so your recordings match your schedule.</li>
+  <li><strong>Refreshed meeting tabs.</strong> The Transcript / Results / Chat / Speakers tabs now use the same thumb-tab style as the rest of the app.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Wed, 17 Jun 2026 19:55:56 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.10/Hindsight-1.0.10.dmg" sparkle:edSignature="hw160HuP8w1FcVxvJSp/Ic2fWuDmTC3gcbarcJqEpKS2L2SRcjUtWsC36M7CEyJ2mmoV1aMZjKRnLfWQqIMdDA==" length="20826420" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
