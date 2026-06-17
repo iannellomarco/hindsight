@@ -9,13 +9,16 @@ updates**.
 
 ## 1.0.8
 
-Fixes meeting transcription, which could hang.
+Fixes meeting transcription.
 
 - **Transcription no longer freezes.** A scheduling deadlock could leave the live
   transcript blank during a meeting and the post-recording "transcribing…" step
   stuck indefinitely. Recording and transcription now run on separate lanes — the
   live transcript fills in during the meeting and the final transcript completes
   promptly.
+- **More accurate speakers.** Tightened speaker separation so a single remote
+  participant is no longer occasionally split into two, and a slow
+  speaker-detection step no longer holds up the final transcript.
 
 ## 1.0.7
 
