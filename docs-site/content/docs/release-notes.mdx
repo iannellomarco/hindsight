@@ -7,6 +7,16 @@ What's new in Hindsight, newest first. Hindsight keeps itself up to date, and
 you can check manually from the Colophon under **The Apparatus → Check for
 updates**.
 
+## 1.0.8
+
+Fixes meeting transcription, which could hang.
+
+- **Transcription no longer freezes.** A scheduling deadlock could leave the live
+  transcript blank during a meeting and the post-recording "transcribing…" step
+  stuck indefinitely. Recording and transcription now run on separate lanes — the
+  live transcript fills in during the meeting and the final transcript completes
+  promptly.
+
 ## 1.0.7
 
 Clearer day navigation.
