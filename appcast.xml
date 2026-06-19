@@ -169,5 +169,18 @@
       <pubDate>Wed, 17 Jun 2026 19:55:56 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.10/Hindsight-1.0.10.dmg" sparkle:edSignature="hw160HuP8w1FcVxvJSp/Ic2fWuDmTC3gcbarcJqEpKS2L2SRcjUtWsC36M7CEyJ2mmoV1aMZjKRnLfWQqIMdDA==" length="20826420" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.11</title>
+      <sparkle:version>20260619081620</sparkle:version>
+      <sparkle:shortVersionString>1.0.11</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>A fix so a finished day always shows up where you expect it.</p>
+<ul>
+  <li><strong>New days appear right away.</strong> After you stop and save a day, it now shows up on the Days page immediately &mdash; previously a freshly finished day could stay hidden there until you quit and reopened the app.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Fri, 19 Jun 2026 08:20:37 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.11/Hindsight-1.0.11.dmg" sparkle:edSignature="9U3TpDAEx/RvhotU8jYcgpL10NZUG3vlQX4NwTfHLxyFElDxAwuqOvf4+rJ4W5GuRMDShFCtBKQqsjyUuOM0Cg==" length="20827046" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
