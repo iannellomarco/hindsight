@@ -182,5 +182,23 @@
       <pubDate>Fri, 19 Jun 2026 08:20:37 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.11/Hindsight-1.0.11.dmg" sparkle:edSignature="9U3TpDAEx/RvhotU8jYcgpL10NZUG3vlQX4NwTfHLxyFElDxAwuqOvf4+rJ4W5GuRMDShFCtBKQqsjyUuOM0Cg==" length="20827046" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.0.12</title>
+      <sparkle:version>20260620143104</sparkle:version>
+      <sparkle:shortVersionString>1.0.12</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>A broad polish pass: more reliable meeting status, far wider accessibility, and a faster, more consistent interface.</p>
+<ul>
+  <li><strong>Meeting status updates instantly.</strong> The menu-bar recording glyph, the permission prompt when a recording is blocked, and the &ldquo;transcribing&hellip;&rdquo; indicator now reflect what&rsquo;s happening the moment it changes instead of occasionally lagging behind.</li>
+  <li><strong>Much better VoiceOver support.</strong> Buttons and controls across the app &mdash; Meetings, the Day Journal, the Second Brain, onboarding, and the Index &mdash; now announce meaningful names, and secondary text meets WCAG AA contrast.</li>
+  <li><strong>Snappier reading.</strong> Opening a finished day, searching the Index, and reading streamed answers are all faster and smoother.</li>
+  <li><strong>Clearer meetings.</strong> The section is consistently called &ldquo;Meetings&rdquo;, larger calls get more distinct speaker colors, the connect-calendar prompt refreshes after you grant access, and a failed prompt now shows an error instead of silently doing nothing.</li>
+  <li><strong>Rebindable meeting hotkey.</strong> The global start/stop shortcut (default &#8984;&#8679;M) can now be changed in Settings &rarr; The Minutes.</li>
+  <li><strong>Smaller fixes.</strong> Onboarding scrolls on small displays, the meeting audio player resets at the end of a clip, deleting a custom word asks first, and a failed app summary can be retried.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Sat, 20 Jun 2026 14:35:49 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.12/Hindsight-1.0.12.dmg" sparkle:edSignature="BW/MT6jU/YUDUsyb7f5PxgWzzOA6IStajEILV1Wto1e+z05P5XWpVKVlLy+EZb/d68hjqlwpYDUKLSesZJdDBQ==" length="20879428" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
