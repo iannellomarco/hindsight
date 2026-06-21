@@ -200,5 +200,21 @@
       <pubDate>Sat, 20 Jun 2026 14:35:49 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.0.12/Hindsight-1.0.12.dmg" sparkle:edSignature="BW/MT6jU/YUDUsyb7f5PxgWzzOA6IStajEILV1Wto1e+z05P5XWpVKVlLy+EZb/d68hjqlwpYDUKLSesZJdDBQ==" length="20879428" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.1.0</title>
+      <sparkle:version>20260621110743</sparkle:version>
+      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Your Second Brain now understands <em>you</em> &mdash; not just the people, files, and projects in your work, but who you are and how your days have been going.</p>
+<ul>
+  <li><strong>It knows you.</strong> Tell it your name and role (during setup, or anytime in Settings) and it speaks to you personally &mdash; greeting you by name and writing your day as someone it actually knows.</li>
+  <li><strong>It learns you.</strong> From your own days it quietly works out things like your role, the way you work, and how you&rsquo;ve been feeling &mdash; and asks you to confirm the important guesses before trusting them. Nothing is assumed, and anything that feels off is one tap to dismiss.</li>
+  <li><strong>A new &ldquo;You&rdquo; tab.</strong> A home for your profile: a short portrait of who you are, the traits it has noticed, and a timeline of how your days have felt.</li>
+  <li><strong>Private by default.</strong> All of this stays on your Mac and works with on-device AI. Sharing your profile with a cloud provider takes a separate, explicit opt-in.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Sun, 21 Jun 2026 11:12:32 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.1.0/Hindsight-1.1.0.dmg" sparkle:edSignature="fCFP05DzBcGgIIRTIhmt+kfgrMZ8an8bbPB/lzCfmhjDhoxEt0ZaSjf65mejfGmcpJqQZHWZBo6Y9LE+Hpp3AA==" length="21332100" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
