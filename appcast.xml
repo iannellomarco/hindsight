@@ -237,7 +237,7 @@
       <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
       <description><![CDATA[<p>The Second Brain now answers from what your screens actually showed — not just who and what kept recurring.</p>
 <ul>
-  <li><strong>Answers from real content.</strong> Ask "why do I keep working with Said?" and the chat now reads the actual text of the relevant moments — the emails, docs, and messages — and grounds its answer in them, with <code>[#n]</code> citations you can click to jump straight to the frame.</li>
+  <li><strong>Answers from real content.</strong> Ask "why do I keep working with this client?" and the chat now reads the actual text of the relevant moments — the emails, docs, and messages — and grounds its answer in them, with <code>[#n]</code> citations you can click to jump straight to the frame.</li>
   <li><strong>It knows you're not your own coworker.</strong> The Second Brain no longer lists you among the people you work with.</li>
   <li><strong>Tighter privacy at the edge.</strong> When a cloud model is in use, email addresses and phone numbers are scrubbed from what's sent — on top of the existing secret redaction.</li>
 </ul>
