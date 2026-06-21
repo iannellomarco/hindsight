@@ -216,5 +216,19 @@
       <pubDate>Sun, 21 Jun 2026 11:12:32 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.1.0/Hindsight-1.1.0.dmg" sparkle:edSignature="fCFP05DzBcGgIIRTIhmt+kfgrMZ8an8bbPB/lzCfmhjDhoxEt0ZaSjf65mejfGmcpJqQZHWZBo6Y9LE+Hpp3AA==" length="21332100" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.1.1</title>
+      <sparkle:version>20260621162638</sparkle:version>
+      <sparkle:shortVersionString>1.1.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Two fixes to the Second Brain.</p>
+<ul>
+  <li><strong>Dismiss sticks.</strong> When you dismiss something the Second Brain inferred about you, it no longer quietly comes back the next day.</li>
+  <li><strong>Sharper recall.</strong> Asking about a specific person or file now surfaces the right ones to jump to, instead of coming up empty on a normally-worded question.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Sun, 21 Jun 2026 16:29:49 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.1.1/Hindsight-1.1.1.dmg" sparkle:edSignature="8E05EUPA0U42joJhgMqaFxyTI1Gsq5D2TH57CyAJw6g+RyQhTEr8pp9dyHD1noO5DDoFaBsxqWHPc9A5L9phDQ==" length="21350137" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
