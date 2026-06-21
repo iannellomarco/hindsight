@@ -230,5 +230,26 @@
       <pubDate>Sun, 21 Jun 2026 16:29:49 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.1.1/Hindsight-1.1.1.dmg" sparkle:edSignature="8E05EUPA0U42joJhgMqaFxyTI1Gsq5D2TH57CyAJw6g+RyQhTEr8pp9dyHD1noO5DDoFaBsxqWHPc9A5L9phDQ==" length="21350137" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.2.0</title>
+      <sparkle:version>20260621193859</sparkle:version>
+      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>The Second Brain now answers from what your screens actually showed — not just who and what kept recurring.</p>
+<ul>
+  <li><strong>Answers from real content.</strong> Ask "why do I keep working with Said?" and the chat now reads the actual text of the relevant moments — the emails, docs, and messages — and grounds its answer in them, with <code>[#n]</code> citations you can click to jump straight to the frame.</li>
+  <li><strong>It knows you're not your own coworker.</strong> The Second Brain no longer lists you among the people you work with.</li>
+  <li><strong>Tighter privacy at the edge.</strong> When a cloud model is in use, email addresses and phone numbers are scrubbed from what's sent — on top of the existing secret redaction.</li>
+</ul>
+<p>The Days page is also redesigned:</p>
+<ul>
+  <li><strong>A sidebar for the book.</strong> An always-available table of contents. It auto-hides to give the page room — hover the left edge to peek it open — or pin it from the toggle in the top-left.</li>
+  <li><strong>Timeline previews.</strong> Each moment in a day's timeline now shows a thumbnail you can click to open full-size.</li>
+  <li>A bigger delete control, and clearer labels distinguishing asking the whole book from chatting with a single day.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Sun, 21 Jun 2026 19:42:50 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.2.0/Hindsight-1.2.0.dmg" sparkle:edSignature="VJnaUD2oPCKq/lyIkt9yYcfjZPleEBXeSGyb7UBfr0HPA4+1pYfopbqECOWk5p9DyPL6An5wg1sFyRnK2roUBA==" length="21462156" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
