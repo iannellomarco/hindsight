@@ -251,5 +251,27 @@
       <pubDate>Sun, 21 Jun 2026 19:42:50 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.2.0/Hindsight-1.2.0.dmg" sparkle:edSignature="VJnaUD2oPCKq/lyIkt9yYcfjZPleEBXeSGyb7UBfr0HPA4+1pYfopbqECOWk5p9DyPL6An5wg1sFyRnK2roUBA==" length="21462156" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.3.0</title>
+      <sparkle:version>20260624173106</sparkle:version>
+      <sparkle:shortVersionString>1.3.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Find any day in your history at a glance, and never lose one to an accidental delete.</p>
+<ul>
+  <li><strong>The Day Index.</strong> Press <code>⌘L</code> anywhere to open a chronological overview of every captured day — title, date, and a thumbnail for each, with a density strip showing how much history you've built. Use <code>↑↓</code> to move and <code>Return</code> to turn straight to a day.</li>
+  <li><strong>Recoverable deletions.</strong> Deleting a day now removes it from the book but offers an <em>Undo</em> right after, from Today — so a mistake never costs you a captured day.</li>
+  <li><strong>Always-on sidebar.</strong> The book's Parts are visible by default on launch; unpin from the masthead toggle if you'd rather have the room.</li>
+  <li><strong>Richer timeline.</strong> Every activity row now shows a thumbnail you can click to open full-size — not just the starred moments.</li>
+</ul>
+<p>A real privacy hardening for AI vision:</p>
+<ul>
+  <li><strong>Secret-bearing frames never leave your Mac.</strong> If a screenshot's captured text revealed a card, key, or token, its pixels are no longer sent to a vision provider — the text redactor can't see into the image, so the whole frame is withheld.</li>
+  <li><strong>Honest about what vision sees.</strong> The vision setting and the on-day redaction badge now say plainly: captured text is scrubbed, but visible pixels sent for descriptions are not.</li>
+</ul>
+<p>And a sweep of reliability and polish: the recording control no longer lets <em>Discard</em> look like the main action; a failed Second Brain question now tells you instead of hanging; the "relaunch to apply Screen Recording" state stays visible until you act on it; a new multi-step progress bar in setup; and consistent ask fields, status dots, and delete confirmations throughout.</p>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Wed, 24 Jun 2026 17:33:13 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.3.0/Hindsight-1.3.0.dmg" sparkle:edSignature="LouaECqOrRBj5tnfuI5BcOdl9B+8aTJj2him75ig6mlY2BSLnSa45clD6oLOtNsN021THDCOKkHkLM2cjbBaAQ==" length="21742888" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
