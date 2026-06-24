@@ -273,5 +273,22 @@
       <pubDate>Wed, 24 Jun 2026 17:33:13 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.3.0/Hindsight-1.3.0.dmg" sparkle:edSignature="LouaECqOrRBj5tnfuI5BcOdl9B+8aTJj2him75ig6mlY2BSLnSa45clD6oLOtNsN021THDCOKkHkLM2cjbBaAQ==" length="21742888" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.3.1</title>
+      <sparkle:version>20260624201807</sparkle:version>
+      <sparkle:shortVersionString>1.3.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>A smarter privacy boundary for on-device AI — and a more consistent feel throughout.</p>
+<ul>
+  <li><strong>Local AI now grounds on the real thing.</strong> When you use an on-device provider (Ollama, Apple Foundation Models, or LM Studio), Hindsight no longer strips contact details from what the model sees — names, emails, and phone numbers are preserved so your Second Brain and chat answers reference real people and projects instead of <code>[REDACTED:name]</code>. Nothing leaves your Mac, so there's no privacy cost. Secrets (cards, keys, tokens) are still scrubbed for every provider.</li>
+  <li><strong>Meeting chat speaks up when it fails.</strong> A question to a meeting that can't reach the AI provider now shows the reason inline, instead of going silent or leaving a placeholder message behind.</li>
+  <li><strong>One Send, everywhere.</strong> The ask boxes in the meeting panel, meeting detail, and journal chats now share the same look and the same Send control — a consistent composer across the whole app.</li>
+  <li><strong>Keyboard tabs in meetings.</strong> Switch a meeting's Transcript / Results / Chat / Speakers with <code>⌘1</code>–<code>⌘4</code>, matching the rest of the app.</li>
+</ul>
+<p>Plus the usual polish: standardized section headings and spacing, a centered empty state on Meetings, and sharper accessibility labels.</p>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Wed, 24 Jun 2026 20:21:25 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.3.1/Hindsight-1.3.1.dmg" sparkle:edSignature="2yWYpidM+bYCsTD84plXzCjSJLLcDawwfkuzCLMNHdKcgDu49phzyDtwR4bGgk8ssBXPEOZJuUIZ/lXVXSubAw==" length="21753721" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
