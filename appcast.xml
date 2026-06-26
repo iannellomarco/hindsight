@@ -313,5 +313,21 @@
       <pubDate>Fri, 26 Jun 2026 17:01:26 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.4.0/Hindsight-1.4.0.dmg" sparkle:edSignature="HoF/cqphySDX+FXtVMG5E/yKSfpZUyQx89oHaLa130xsjbrIFUjsNgsM+PjpbYwUVFko9g5FBWBHvFmSbbtVCw==" length="22083273" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.4.1</title>
+      <sparkle:version>20260626175050</sparkle:version>
+      <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Today's Focus is now smarter, always visible, and reachable from every meeting.</p>
+<ul>
+  <li><strong>Extract Todos from any meeting.</strong> A new checklist button in the meeting detail reads the transcript and pulls out the action items — things you said you'd do, were asked to do, or agreed to. They land in Today's Focus immediately, each tagged with the meeting it came from.</li>
+  <li><strong>Todos from real content, not just patterns.</strong> When an AI provider is connected, Today's Focus now reads the actual text of your meeting transcripts and on-screen captures — not just the statistics — and extracts specific, actionable tasks ("Send the brief to Jane by Friday") instead of pattern inferences ("You haven't touched plan.md in 8 days"). Works alongside the deterministic floor, which always runs, even offline.</li>
+  <li><strong>Always-visible, always-refreshable.</strong> The Today's Focus rail is now always on screen — even when empty, it shows what to do to surface tasks. A refresh button lets you regenerate on demand.</li>
+  <li><strong>Auto-extract after meetings.</strong> When a meeting finishes, its action items are extracted automatically — you don't have to do anything.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Fri, 26 Jun 2026 17:54:05 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.4.1/Hindsight-1.4.1.dmg" sparkle:edSignature="GttcKopilKe/r7kraCRh00c6/pj9HiILHEoH2qBISWwlZGhEoypPtFdfadq0tYOse3cU/cKWHZHwY/jG4wGuBg==" length="22174713" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
