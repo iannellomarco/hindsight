@@ -82,13 +82,76 @@ A few things keep the picture stable and honest:
 You can read all of this with no AI provider connected — the beliefs are
 computed locally and shown as cards.
 
+## The Reflection
+
+When you connect an AI provider, the Second Brain gains a deeper layer: **the
+Reflection**. After you finish a day — or when you open Hindsight in the morning
+— it reads the actual moments it captured (not just the counts, but *what was on
+your screen, in what order, at what time*) and writes a short Reflection: two or
+three genuine observations a thoughtful colleague might make.
+
+Not "X is heating up." More like: *"You seem to hit a wall around 3pm — switching
+to email right after compile errors."* Every observation points back to the
+specific moments it noticed it in — if it can't ground an observation in
+something it actually saw, it doesn't say it.
+
+The Reflection runs on your Mac if you use Apple Foundation Models or Ollama —
+free, private, no cloud needed. It appears as the lead card in Insights.
+
+<Callout>
+  The Reflection needs an AI provider. The beliefs, Insights cards, and Network
+  work without one. A local provider (Ollama, Apple Foundation Models) keeps the
+  Reflection on your Mac.
+</Callout>
+
+## How the self-model develops
+
+The Reflection's observations don't just appear and vanish — they become lasting
+beliefs. When the same pattern recurs across days, the observation is reinforced
+and its confidence grows. When it doesn't recur, it fades. Patterns that recur
+enough times promote to stable **traits** — durable dispositions like "you work
+best in long morning blocks" or "you avoid documentation until pressure builds."
+
+Those traits then shape what the Second Brain notices next. Its perception is
+conditioned on what it already understands: if it has learned you're a methodical
+debugger, it pays attention when you break that pattern — and the breakage is
+often the most interesting signal. A higher-order reflection pass periodically
+reads the accumulated beliefs and synthesizes higher-level themes ("your
+avoidance of docs and tests both point to deferring unglamorous work") and
+tensions (patterns that pull in different directions).
+
+This is the closed loop: observe → believe → reinforce or revise → perceive
+differently → observe again. The understanding deepens, not just accumulates.
+And it's honest at every step: observations are grounded in real captured
+moments, every chat answer is verified against the evidence, and beliefs that
+don't hold up decay and retire.
+
+## The story of becoming
+
+The **"Who you are"** card on the You tab synthesizes the self-model into a
+narrative — not a label, but a story of how the Second Brain's understanding of
+you is developing. It describes what it's come to understand, how that's changed
+recently, and where it sees tension:
+
+> *You're a builder who values deep focus — you work best in long morning blocks,
+> and you've gotten steadier at holding that focus through the afternoon. There's
+> a tension, though: when you hit a compile error, you tend to switch to email —
+> I first noticed this three reflections ago, and it's held.*
+
+The narrative is grounded in the accumulated evidence, and it distinguishes
+what's firm (stable traits) from what's still emerging (new patterns). It
+updates as the self-model develops — so it tells a story of becoming, not a
+static portrait.
+
 ## Insights
 
-The **Insights** tab surfaces what's worth your attention right now, all derived
-deterministically from your history:
+The **Insights** tab surfaces what's worth your attention right now:
 
-- **Worth noticing** — patterns rising or cooling across your recent days. Each
-  has a quick action to draft an email or a follow-up calendar event from it.
+- **Reflection** (when an AI provider is connected) — the lead card, with two or
+  three genuine observations grounded in your recent captured moments.
+- **Worth noticing** — patterns rising or cooling across your recent days, all
+  derived deterministically from your history. Each has a quick action to draft
+  an email or a follow-up calendar event from it.
 - **Worth confronting** — a frank, grounded mirror of things your own history
   suggests, each shown with its evidence. This stays silent unless your tone dial
   (in the Colophon) allows it, and it never fabricates a criticism.
@@ -125,7 +188,9 @@ inventing anything:
   from that bundle, keeping `[#n]` citations so you can jump to the exact moment
   each claim came from.
 - Replies are checked against that evidence before they're saved, so a claim the
-  history doesn't support is stripped out.
+  history doesn't support is stripped out. This verification runs on **every**
+  answer — not just the relational ones — so a fabricated person or project can
+  never slip through.
 
 Conversations are remembered: the Second Brain resumes your thread, keeps a
 rolling summary so long chats stay coherent, and can open a fresh chat when you

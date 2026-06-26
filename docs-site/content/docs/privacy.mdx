@@ -71,20 +71,33 @@ redaction pass is pure and offline — it makes no network calls of its own.
 These are all **off by default** and each is independently controlled in the
 Colophon:
 
-- **AI vision descriptions.** Sends a downscaled, cropped screenshot of an
-  activity to a vision-capable model for a short visual description. A *local*
-  model keeps the image on your Mac; a *cloud* model also requires the cloud
-  consent above.
 - **External agents (MCP).** Lets an external AI agent query your journal
   locally. It exposes only the structured, already-redacted recall — people,
   files, links, and graph — never screenshots. Exposing raw screen text
   (full-text search) is a separate, extra opt-in, and turning the agent server
   off revokes it.
 
-A related option, **AI refinement of the self-model**, is on by default once a
+A related option, **AI refinement of insights**, is on by default once a
 provider is configured. It lets the connected AI tidy your beliefs and topics;
 turn it off to keep the plain, deterministic Second Brain. Like everything else,
 it only uses the provider you chose, under the same gate.
+
+## Local AI sees the real thing
+
+When you use a local provider (Ollama, Apple Foundation Models, LM Studio),
+nothing leaves your Mac — so there's no privacy cost to sending the full,
+un-redacted context. Hindsight preserves real names, emails, and phone numbers
+for local providers so the Second Brain grounds on the real thing instead of
+`[REDACTED:name]` placeholders. Secrets (cards, keys, tokens) are still scrubbed
+for every provider, local or cloud.
+
+## Every answer is verified
+
+Every chat answer from the Second Brain is checked against your actual captured
+history before it's shown. If the model invents a person, project, or fact that
+isn't grounded in your data, the claim is stripped out. This verification runs
+on every answer — not just the relational ones — so a fabricated claim can never
+slip through regardless of the question type.
 
 ## Where to configure it: the Colophon
 
@@ -101,9 +114,12 @@ To connect a provider:
    required) and a **model**, or use **Refresh list** to pull available models.
 4. Press **Test Connection** to verify, then **Save**.
 
-Under **The Second Brain** in the same section you'll find the cloud consent
-toggle (**Allow cloud AI to analyze your journal**) and the vision option; under
-**External Readers** you'll find the agent (MCP) toggles.
+When a cloud provider is selected, the **Allow cloud AI** master toggle appears
+under **The Second Brain** — one trust decision, with **Share your profile** as
+an optional sub-toggle for sending your name and role. When a local provider is
+selected, the cloud toggles are hidden and you'll see a simple "Your AI runs on
+your Mac — nothing leaves this device." Under **External Readers** you'll find
+the agent (MCP) toggles.
 
 ## Where your keys are stored
 
