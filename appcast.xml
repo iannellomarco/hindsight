@@ -350,5 +350,21 @@
       <pubDate>Sun, 28 Jun 2026 00:51:52 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.5.0/Hindsight-1.5.0.dmg" sparkle:edSignature="AuYthWRWIF1ddEqElKB/F5Kitgi/EO2Atvu8u/mjh6tqFudMoBrDddBJ4mp4Ob7AApx7hvmNIBG0N9rMs5DzBQ==" length="23572905" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.5.1</title>
+      <sparkle:version>20260628013907</sparkle:version>
+      <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>A dedicated embeddings model picker for Folder Context RAG — and three fixes the adversarial code review caught before they reached you.</p>
+<ul>
+  <li><strong>Pick your embeddings model.</strong> Folder Context RAG now has its own provider config in Settings → Intelligence → File Index, parallel to your chat AI. Point it at Harrier OSS v1 0.6B (or any embedding model) in your Ollama, LM Studio, or oMLX instance — independent of your chat model. A refresh-from-provider list helps you pick. With none set, files use the on-device model.</li>
+  <li><strong>Saves take effect immediately.</strong> Configuring the embeddings model used to require an app relaunch (a stale-capture bug froze the old config). Now the index and retrieval read the live setting on every call — change the model, hit re-index, and it's used right away.</li>
+  <li><strong>File content never leaves your Mac.</strong> The fallback path that used your chat AI for embeddings is now gated to local providers only — a cloud chat provider will never receive your file text for embedding.</li>
+  <li><strong>Retrieval uses the right model.</strong> A matching fix ensures the query vectors and the indexed vectors come from the same model, so semantic search actually works (it was silently mismatched before).</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon. We recommend Harrier OSS v1 0.6B (the MLX 8-bit build) in your Ollama or LM Studio instance for file embeddings.</p>]]></description>
+      <pubDate>Sun, 28 Jun 2026 01:43:21 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.5.1/Hindsight-1.5.1.dmg" sparkle:edSignature="rrJcMA58Q2Vg/0t9X4Y8DebUs31cI6UFhEQS+uv9mRhkxaEZc4WeABehoGzY13qgTr6JqjysBzcP8HxwM++fAA==" length="23588875" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
