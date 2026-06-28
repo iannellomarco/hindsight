@@ -7,6 +7,22 @@ What's new in Hindsight, newest first. Hindsight keeps itself up to date, and
 you can check manually from the Colophon under **The Apparatus → Check for
 updates**.
 
+## 1.5.0
+
+Your Second Brain now leads with genuine AI insight, reads your own files, and works reliably on local models — all on-device, all private.
+
+- **The page now leads with what the AI actually did.** The Second Brain used to open with templated counting ("X sits at the center of a lot of what you do", cycling a few phrases). Now the AI Reflection — grounded observations written from your real captured moments — leads the page, and the templated belief cards are rephrased into varied, specific observations by the model. The vanity stat row is gone. With no AI connected, you get an honest "connect a model" prompt instead of fake templated confidence.
+- **Your Second Brain can now read your files.** Point Hindsight at a workspace folder — a repo, a docs folder, a papers folder — and it indexes everything inside on your Mac: code, markdown, PDFs, images (via OCR), spreadsheets, rich text, email. The Reflection can then connect your screen activity to your own work artifacts, cited by file. "You switched to Slack right after the compile errors your plan flagged." Nothing leaves your Mac; embeddings run on your local model.
+- **Local AI is now reliable enough to be the primary brain.** Hindsight now asks your local model (Ollama, LM Studio, oMLX) for structured JSON output instead of prompting and hoping — the change that makes a 3–8B local model dependable as your main Second Brain, not a fallback. Cloud stays optional and opt-in.
+- **The Reflection checks itself, and sees the right frames.** Every reflection is now verified against your actual captured data before it sticks — a fabricated name paired with a real citation gets stripped. And it retrieves semantically-relevant frames (not just the most recent ones), so a reflection about "the migration" pulls migration moments from across the week.
+
+Today's Focus is sharper and lands in Reminders:
+
+- **Cleaner, more useful todos.** Citation markers and raw URLs/IPs no longer leak into your todo titles, and machine-internal detail text is replaced with human guidance. A tighter, higher-quality list.
+- **Send to Reminders, not Notes.** The export now creates one checkable reminder per todo in a "Hindsight" list — native checklist, individually completable, syncs to your iPhone. Action items belong in Reminders.
+
+Requires macOS 14.2 or later, Apple Silicon. Folder Context RAG and the local-AI improvements work best with a local embedding model (we recommend Harrier OSS v1 0.6B, the MLX 8-bit build, in your Ollama or LM Studio instance) — but everything degrades gracefully to the on-device model when none is running.
+
 ## 1.4.1
 
 Today's Focus is now smarter, always visible, and reachable from every meeting.
