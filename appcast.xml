@@ -366,5 +366,19 @@
       <pubDate>Sun, 28 Jun 2026 01:43:21 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.5.1/Hindsight-1.5.1.dmg" sparkle:edSignature="rrJcMA58Q2Vg/0t9X4Y8DebUs31cI6UFhEQS+uv9mRhkxaEZc4WeABehoGzY13qgTr6JqjysBzcP8HxwM++fAA==" length="23588875" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.5.2</title>
+      <sparkle:version>20260628090444</sparkle:version>
+      <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Debugging tools for the embeddings provider — so you can tell when your model isn't loaded and fix it without reading server logs.</p>
+<ul>
+  <li><strong>Test Connection for embeddings.</strong> The embeddings provider card now has a "Test Connection" button (just like the chat AI). It sends a tiny embed request to your configured endpoint and tells you whether it worked — including the served model and vector dimensions — or shows the exact error. No more guessing whether your model is loaded or the name is right.</li>
+  <li><strong>Diagnostic logging.</strong> The embeddings path now logs to Console.app (subsystem <code>com.iannellomarco.hindsight.core</code>, category <code>Embeddings</code> + <code>FileIndexer</code>). You can see exactly what model was requested, whether it succeeded, and when the app fell back to the on-device model — filter Console by the subsystem and send the logs when something's off.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Sun, 28 Jun 2026 09:08:38 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.5.2/Hindsight-1.5.2.dmg" sparkle:edSignature="9pVsJU1mT0p3C1xEM4HX4/yBJnZGMwajArYwhvCJjDy9/QUJpS8WJRgxfy0Cv7Rt2ffMPhbGtbRsThXbha/MDQ==" length="23596479" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
