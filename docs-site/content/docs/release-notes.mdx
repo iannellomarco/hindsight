@@ -7,6 +7,17 @@ What's new in Hindsight, newest first. Hindsight keeps itself up to date, and
 you can check manually from the Colophon under **The Apparatus → Check for
 updates**.
 
+## 1.5.1
+
+A dedicated embeddings model picker for Folder Context RAG — and three fixes the adversarial code review caught before they reached you.
+
+- **Pick your embeddings model.** Folder Context RAG now has its own provider config in Settings → Intelligence → File Index, parallel to your chat AI. Point it at Harrier OSS v1 0.6B (or any embedding model) in your Ollama, LM Studio, or oMLX instance — independent of your chat model. A refresh-from-provider list helps you pick. With none set, files use the on-device model.
+- **Saves take effect immediately.** Configuring the embeddings model used to require an app relaunch (a stale-capture bug froze the old config). Now the index and retrieval read the live setting on every call — change the model, hit re-index, and it's used right away.
+- **File content never leaves your Mac.** The fallback path that used your chat AI for embeddings is now gated to local providers only — a cloud chat provider will never receive your file text for embedding.
+- **Retrieval uses the right model.** A matching fix ensures the query vectors and the indexed vectors come from the same model, so semantic search actually works (it was silently mismatched before).
+
+Requires macOS 14.2 or later, Apple Silicon. We recommend Harrier OSS v1 0.6B (the MLX 8-bit build) in your Ollama or LM Studio instance for file embeddings.
+
 ## 1.5.0
 
 Your Second Brain now leads with genuine AI insight, reads your own files, and works reliably on local models — all on-device, all private.
