@@ -399,5 +399,20 @@
       <pubDate>Tue, 30 Jun 2026 07:04:24 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.6.0/Hindsight-1.6.0.dmg" sparkle:edSignature="82syj7734Rq2zegHEbdAoqL6sHcBG8JaiaQq+aPfwb2YTcPrDQCngH7yHr+iTMwiLGNzR1K1qkwHEBEEv/TFDQ==" length="23668637" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.7.0</title>
+      <sparkle:version>20260630101331</sparkle:version>
+      <sparkle:shortVersionString>1.7.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Export your meeting transcripts, get real speakers out of single-microphone recordings, and watch — and pause — file indexing while it runs.</p>
+<ul>
+  <li><strong>Export any transcript.</strong> Save a meeting's transcript to a file — plain text, Markdown, subtitles (SRT or VTT), or JSON — from the new Export button on the meeting, or "Save Transcript…" in the Library's right-click menu. Everything is written locally to a file you choose; nothing is uploaded.</li>
+  <li><strong>Single-microphone recordings get real speakers.</strong> A meeting captured from a single audio source — just your microphone, or one where the system audio dropped partway through — used to collapse into one speaker labelled "Me". Now Hindsight splits it into separate speakers whenever it hears more than one voice, while a genuine solo recording still reads as "Me". Re-analyzing an existing meeting picks this up too.</li>
+  <li><strong>See — and pause — file indexing.</strong> Indexing a folder now shows a real progress bar (files done out of the total) instead of an open-ended spinner, and you can pause a long index and resume it later from where it left off. Pausing never leaves a half-built index behind.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Tue, 30 Jun 2026 10:17:03 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.7.0/Hindsight-1.7.0.dmg" sparkle:edSignature="WzDSnoCdmXl2XyRm6d4DG/l8TjlzeJEpfbYkZdsGCw7Vfz8Uk2xGUHD9P0wPHIAfRJyhVG6F+c66Fj7tkXaECA==" length="23733138" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
