@@ -380,5 +380,24 @@
       <pubDate>Sun, 28 Jun 2026 09:08:38 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.5.2/Hindsight-1.5.2.dmg" sparkle:edSignature="9pVsJU1mT0p3C1xEM4HX4/yBJnZGMwajArYwhvCJjDy9/QUJpS8WJRgxfy0Cv7Rt2ffMPhbGtbRsThXbha/MDQ==" length="23596479" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.6.0</title>
+      <sparkle:version>20260630065933</sparkle:version>
+      <sparkle:shortVersionString>1.6.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>A more AI-driven Second Brain — choose your own embedding model, smarter suggested to-dos, and meaning-aware file indexing — alongside a wave of reliability fixes across reminders, your days, and the Second Brain.</p>
+<ul>
+  <li><strong>Choose your embedding model.</strong> File indexing now uses whatever embedding model you select — a local model (nothing leaves your Mac) or a cloud one — for <em>both</em> indexing and search, so your files are embedded with the model you want and your queries always match. A cloud embedding model only ever receives file text if you explicitly pick one and grant consent.</li>
+  <li><strong>Smarter suggested to-dos.</strong> Today's task suggestions now read as natural, imperative tasks, meeting action items are pulled out by AI, and tasks you extract from a meeting stay on the rail when the page refreshes. Each step falls back to the built-in, on-device behavior when no model is available.</li>
+  <li><strong>Meaning-aware file chunking.</strong> With a local model configured, files are split into sections by meaning rather than by paragraph or page, for sharper retrieval — and it cleanly falls back to structural chunking otherwise. PDFs keep their page-accurate citations.</li>
+  <li><strong>File search actually uses your vectors.</strong> Semantic file search now runs whenever you've typed a query (multi-word queries used to silently fall back to keyword-only), re-indexes only the files that changed, and no longer re-embeds your whole folder on every pass. Indexing is cancellable and tells you when a folder has nothing to index.</li>
+  <li><strong>Reminders that behave.</strong> "Add to Reminders" now confirms when it worked, won't create duplicates, and writes everything in one pass — and a meeting reminder is no longer dropped when notification permission was still warming up.</li>
+  <li><strong>Faster, more honest day pages.</strong> Opening a day no longer hitches the interface, screenshots use far less memory, the timeline shows the whole day, per-app times and on-disk storage are reported accurately, and deleting a day takes a single confirmation.</li>
+  <li><strong>A steadier Second Brain.</strong> Beliefs no longer fade prematurely, so your self-model and persona stay populated; chat citations resolve to the right frames after you reopen a conversation; and the self-model keeps updating even in Low Power Mode.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Tue, 30 Jun 2026 07:04:24 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.6.0/Hindsight-1.6.0.dmg" sparkle:edSignature="82syj7734Rq2zegHEbdAoqL6sHcBG8JaiaQq+aPfwb2YTcPrDQCngH7yHr+iTMwiLGNzR1K1qkwHEBEEv/TFDQ==" length="23668637" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
