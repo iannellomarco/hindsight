@@ -7,6 +7,20 @@ What's new in Hindsight, newest first. Hindsight keeps itself up to date, and
 you can check manually from the Colophon under **The Apparatus → Check for
 updates**.
 
+## 1.6.0
+
+A more AI-driven Second Brain — pick your own embedding model, smarter suggested to-dos, and meaning-aware file indexing — plus a wave of reliability fixes across reminders, your days, and the Second Brain.
+
+- **Choose your embedding model — and it's used everywhere.** The embedding model you pick for Folder Context RAG now drives *both* indexing and search, so your files and your queries are always embedded with the same model (a mismatch used to silently break semantic search). Point it at a local model in Ollama, LM Studio, or oMLX and nothing leaves your Mac; a cloud embedding model only ever receives your file text if you explicitly choose one and grant consent.
+- **Smarter suggested to-dos.** Today's task suggestions are rephrased into natural, imperative tasks; meeting action items are extracted by the model from the meeting text; and tasks you pull from a specific meeting now stay on the rail when the page refreshes. Each step falls back to the built-in, on-device behavior when no model is connected.
+- **Meaning-aware file chunking.** With a local model configured, files are split into sections by meaning instead of by paragraph or page, so retrieval lands on coherent passages — and it falls back cleanly to structural chunking otherwise. PDFs and spreadsheets keep their page-accurate citations.
+- **File search actually uses your vectors.** Semantic file search now runs whenever you've typed a query (multi-word queries used to silently drop to keyword-only), re-indexes only the files that changed instead of re-embedding the whole folder every time, can be cancelled mid-run, and tells you when a folder has nothing to index.
+- **Reminders that behave.** "Add to Reminders" confirms when it worked, won't pile up duplicates, and writes the whole list in one pass — and an imminent meeting's reminder is no longer dropped when notification permission was still warming up.
+- **Faster, more honest day pages.** Opening a day no longer hitches the interface, screenshots use far less memory, the timeline shows the whole day (not just the first stretch of it), per-app time and on-disk storage are reported accurately, and deleting a day takes a single confirmation.
+- **A steadier Second Brain.** Beliefs no longer fade away prematurely, so your self-model and persona stay populated; chat citations resolve to the right frames after you reopen a conversation; and the self-model keeps updating even in Low Power Mode.
+
+Requires macOS 14.2 or later, Apple Silicon.
+
 ## 1.5.2
 
 Debugging tools for the embeddings provider — so you can tell when your model isn't loaded and fix it without reading server logs.
