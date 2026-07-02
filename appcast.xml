@@ -414,5 +414,22 @@
       <pubDate>Tue, 30 Jun 2026 10:17:03 +0000</pubDate>
       <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.7.0/Hindsight-1.7.0.dmg" sparkle:edSignature="WzDSnoCdmXl2XyRm6d4DG/l8TjlzeJEpfbYkZdsGCw7Vfz8Uk2xGUHD9P0wPHIAfRJyhVG6F+c66Fj7tkXaECA==" length="23733138" type="application/octet-stream"/>
     </item>
+    <item>
+      <title>1.8.0</title>
+      <sparkle:version>20260702082228</sparkle:version>
+      <sparkle:shortVersionString>1.8.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>File indexing got a ground-up rework — dramatically faster and easier on your Mac — and your indexed files now back up the Second Brain's answers directly.</p>
+<ul>
+  <li><strong>File indexing is fast now.</strong> Folders index in parallel waves instead of one file at a time, re-indexing an unchanged folder finishes in seconds with zero wasted work, and a single huge file can no longer stall the run. On machines running a local AI, indexing also stops swapping models back and forth for every file — the biggest source of slowdown.</li>
+  <li><strong>Answers cite your files.</strong> Ask the Second Brain something that lives in an indexed folder and the answer now draws on those files, with [file:n] citations pointing at the exact file and lines it used.</li>
+  <li><strong>Snappier everywhere.</strong> Sending a question paints instantly instead of waiting on retrieval, the Second Brain tab opens without a hitch, and recall, day chats, and the Days list no longer block the interface while they read the journal.</li>
+  <li><strong>Retention that means it.</strong> A new toggle — "Also delete their text &amp; recall data" — makes the retention setting remove expired captures' text, search index, and recall entities too, so old data truly expires and the database stays bounded. It's on for new installs; existing journals keep their history unless you opt in. Cleanup now also runs daily, not just when a session starts.</li>
+  <li><strong>Meetings, tightened.</strong> Stereo playback now lines up with the transcript timeline, and the live preview cuts at natural speech pauses instead of mid-word. Plus a batch of fixes: the AI vision-descriptions toggle actually works now, importing from the legacy app no longer freezes the window, and chat vs. embeddings API keys no longer overwrite each other.</li>
+</ul>
+<p>Requires macOS 14.2 or later, Apple Silicon.</p>]]></description>
+      <pubDate>Thu, 02 Jul 2026 08:26:27 +0000</pubDate>
+      <enclosure url="https://github.com/iannellomarco/hindsight/releases/download/v1.8.0/Hindsight-1.8.0.dmg" sparkle:edSignature="7SBUdxZy55XyWuFju2Q671n7Hildi1Sa+MqzpDbePEuJHOPpn3dsXQRzP12e+ccwweRxXrOL4gwTKJlMQpoPBA==" length="23972675" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
